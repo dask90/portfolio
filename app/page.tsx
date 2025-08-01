@@ -1,95 +1,54 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
 
-export default function Home() {
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <section className="relative w-full h-screen flex flex-col justify-center overflow-hidden">
+      {/* Background image layer */}
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="absolute inset-0 bg-[url('/image/hero1.jpg')] bg-cover bg-center bg-no-repeat z-0"
+      />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
+
+      {/* Text content */}
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2 }}
+        className="relative z-20 px-6 md:px-12 max-w-3xl text-white"
+      >
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold drop-shadow-lg text-left">
+          Hi, I&apos;m David
+        </h1>
+
+        <p className="text-xl mt-4 text-gray-100 dark:text-gray-300 drop-shadow text-left">
+          Frontend Developer & Designer
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-8 flex gap-4 flex-wrap">
+          <Link
+            href="/about"
+            className="bg-amber-300 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-400 transition"
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
+            See More
+          </Link>
+
+          <Link
+            href="/contact"
+            className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
           >
-            Read our docs
-          </a>
+            Contact
+          </Link>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </motion.div>
+    </section>
   );
 }

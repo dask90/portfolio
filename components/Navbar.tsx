@@ -76,12 +76,13 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <button
+            <Link
+              href="/contact"
               onClick={() => setMenuOpen(false)}
               className="flex items-center gap-2 text-sm bg-amber-300 text-black px-5 py-3 rounded-full hover:bg-amber-400 transition w-fit"
             >
               Contact <ArrowRight size={16} />
-            </button>
+            </Link>
           </div>
         </div>
       )}

@@ -10,24 +10,23 @@ const projects = [
     description:
       "An e-commerce platform for building materials using Next.js and Tailwind CSS.",
     image: "/image/m1.jpg",
-    github: "https://github.com/yourname/metalmart",
+    github: "https://github.com/dask90/metalsmart",
     live: "https://metalsmarts.vercel.app/",
-  },
-  {
-    title: "TaskFlow",
-    description:
-      "A task management app built with React and Firebase for real-time collaboration.",
-    image: "/image/taskflow.jpg",
-    github: "https://github.com/yourname/taskflow",
-    live: "https://taskflowapp.vercel.app",
   },
   {
     title: "Portfolio",
     description:
       "My personal portfolio built with Next.js, showcasing my skills and projects.",
     image: "/image/pf.jpg",
-    github: "https://github.com/yourname/portfolio",
+    github: "https://github.com/dask90/portfolio",
     live: "https://yourportfolio.vercel.app",
+  },
+  {
+    title: "UI",
+    description: "Built a nice web portal ui",
+    image: "/image/ui.jpg",
+    github: "",
+    live: "",
   },
 ];
 

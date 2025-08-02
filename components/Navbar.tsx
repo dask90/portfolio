@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-black z-50">
       <div className="px-4 py-7 flex items-center justify-between relative w-full max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="text-xl font-bold text-white">Dave</div>
+        <div className="text-xl pl-20 font-bold text-white">Dave</div>
 
         {/* Center Nav */}
         <div className="hidden md:flex gap-8 mx-auto">

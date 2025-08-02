@@ -22,7 +22,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full md:w-[30%] h-[300px] md:h-[400px] relative rounded-lg overflow-hidden shadow-lg"
+          className="w-full md:w-[30%] aspect-[3/4] relative rounded-lg overflow-hidden shadow-lg"
         >
           <Image src="/image/pp.jpg" alt="Dave" fill className="object-cover" />
         </motion.div>

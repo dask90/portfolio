@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="w-full bg-black text-white py-6">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
         <p className="mb-2 md:mb-0">
-          &copy; {new Date().getFullYear()} Dave. All rights reserved.
+          &copy; {new Date().getFullYear()}. All rights reserved.
         </p>
         <div className="flex gap-4">
           <Link href="/" className="hover:text-amber-400 transition">

@@ -19,7 +19,7 @@ const projects = [
       "My personal portfolio built with Next.js, showcasing my skills and projects.",
     image: "/image/pf.jpg",
     github: "https://github.com/dask90/portfolio",
-    live: "https://yourportfolio.vercel.app",
+    live: "https://portfolio-eh6yj6d33-dask90s-projects.vercel.app",
   },
   {
     title: "UI",
